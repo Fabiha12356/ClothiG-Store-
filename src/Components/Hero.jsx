@@ -1,11 +1,14 @@
 import React from 'react'
 
 import "./Hero.css"
+ import { Link ,Route,Routes} from 'react-router-dom'
+ import Clothes from './Clothes'
+ import Fav from './Fav'
 
 const Hero = () => {
   return (
     
-<section className="hero">
+<><section className="hero">
 
     <div className="hero-overlay">
 
@@ -24,10 +27,14 @@ const Hero = () => {
             </p>
 
             <div className="category-buttons">
-                <a href="#" className="category-btn">Dresses</a>
-                <a href="#" className="category-btn">Shirts</a>
-                <a href="#" className="category-btn">Bags</a>
-                <a href="#" className="category-btn">Shoes</a>
+                 
+                 <Link to="/dresses" className='category-btn'>Dresses</Link>
+                 <Link to="/shirts" className='category-btn'>Shirts</Link>
+                 <Link to="/bags" className='category-btn'>Bags</Link>
+                 <Link to="/shoes" className='category-btn'>Shoes</Link>
+        
+
+            
             </div>
 
             <a href="#" className="shop-btn">
@@ -44,6 +51,9 @@ const Hero = () => {
     </div>
 
 </section>
+
+
+</>
 
   )
 }
