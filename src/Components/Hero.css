@@ -1,0 +1,228 @@
+
+/* HERO SECTION */
+
+.hero {
+    width: 100%;
+    min-height: 580px;
+    margin-top: 20px;
+    padding: 20px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(35, 20, 55, 0.88),
+            rgba(66, 35, 85, 0.55),
+            rgba(30, 20, 45, 0.10)
+        ),
+        url("https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1800");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+}
+
+/* HERO OVERLAY */
+
+.hero-overlay {
+    width: 100%;
+    min-height: 540px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+/* HERO CONTENT */
+
+.hero-content {
+    max-width: 650px;
+    color: white;
+}
+
+.hero-tag {
+    display: inline-block;
+    padding: 9px 18px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #f0abfc;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    backdrop-filter: blur(10px);
+}
+
+/* HEADING */
+
+.hero-content h1 {
+    font-size: 55px;
+    line-height: 1.2;
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: -1.5px;
+}
+
+.hero-content h1 span {
+    display: block;
+    background: linear-gradient(
+        90deg,
+        #c084fc,
+        #f9a8d4,
+        #93c5fd
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* DESCRIPTION */
+
+.hero-content p {
+    font-size: 15px;
+    line-height: 1.9;
+    color: #eee5f5;
+    max-width: 490px;
+    margin-bottom: 30px;
+}
+
+/* CATEGORY BUTTONS */
+
+.category-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+    margin-bottom: 35px;
+}
+
+.category-btn {
+    text-decoration: none;
+    color: white;
+    padding: 11px 25px;
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.13);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    font-size: 13px;
+    font-weight: 500;
+
+    backdrop-filter: blur(12px);
+    transition: 0.3s ease;
+}
+
+.category-btn:hover {
+    background: linear-gradient(
+        135deg,
+        #a855f7,
+        #ec4899
+    );
+
+    border-color: transparent;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(168, 85, 247, 0.3);
+}
+
+/* EXPLORE BUTTON */
+
+.shop-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+
+    padding: 14px 28px;
+    border-radius: 30px;
+
+    text-decoration: none;
+    color: white;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    background: linear-gradient(
+        135deg,
+        #8b5cf6,
+        #ec4899
+    );
+
+    box-shadow: 0 8px 25px rgba(168, 85, 247, 0.3);
+    transition: 0.3s ease;
+}
+
+.shop-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(236, 72, 153, 0.4);
+}
+
+.shop-btn span {
+    font-size: 20px;
+}
+
+/* BOTTOM TEXT */
+
+.hero-bottom {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 20px 6%;
+        min-height: 550px;
+        background-position: center;
+    }
+
+    .hero-overlay {
+        min-height: 510px;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .hero-content p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        border-radius: 15px;
+        min-height: 520px;
+    }
+
+    .hero-content h1 {
+        font-size: 33px;
+    }
+
+    .category-buttons {
+        gap: 9px;
+    }
+
+    .category-btn {
+        padding: 9px 17px;
+        font-size: 12px;
+    }
+
+    .hero-bottom {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+}
