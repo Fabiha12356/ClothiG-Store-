@@ -90,19 +90,7 @@ body {
     gap: 22px;
 }
 
-.search,
-.cart {
-    font-size: 25px;
-    color: #393047;
-    text-decoration: none;
-    transition: 0.3s;
-}
 
-.search:hover,
-.cart:hover {
-    color: #c026d3;
-    transform: translateY(-3px);
-}
 
 /* Login Button */
 

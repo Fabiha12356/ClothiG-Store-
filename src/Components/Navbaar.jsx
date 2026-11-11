@@ -1,31 +1,42 @@
 import React from 'react'
+import { Link,Route,Routes } from 'react-router-dom'
+
 
 import "./Navbaar.css"
+import Clothes from './Clothes'
+import Fav from './Fav'
+import Home from './Home'
 
 const Navbaar = () => {
   return (
+   <>
     <nav className="navbar">
 
-        <a href="#" className="logo">
+        <Link to ="#" className="logo">
             <span className="logo-icon">✦</span>
             FASHION<span>ISTA</span>
-        </a>
+        </Link>
 
         <ul className="nav-links">
-            <li><a href="#" className="active">Home</a></li>
-            <li><a href="#">Clothes</a></li>
-            <li><a href="#">Collections</a></li>
-            <li><a href="#">Favorites</a></li>
-            <li><a href="#">About</a></li>
+            <li> <Link to ="/" className="active">Home</Link></li>
+            <li><Link to ="/clothes">Clothes</Link></li>
+            <li><Link to ="/favorites">Favorites</Link></li>
         </ul>
 
         <div className="nav-actions">
-            <a href="#" className="search">⌕</a>
-            <a href="#" className="cart">♡</a>
-            <a href="#" className="login-btn">Login</a>
+            <button  className="login-btn"> LoGIn </button>
         </div>
 
     </nav>
+
+<Routes>
+    <Route path='/' element={<Home/>}/>
+    <Route path='/clothes' element={<Clothes/>}/>
+    <Route path='/favorites' element={<Fav/>}/>
+</Routes>
+   </>
+
+
   )
 }
 
