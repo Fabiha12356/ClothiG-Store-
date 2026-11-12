@@ -1,28 +1,36 @@
 import React from 'react'
 import { useState,useEffect } from 'react'
 
-const Clothes = (props) => {
+const Clothes = ({condition , API}) => {
 
 let [clothes,setClothes] = useState([])
 
-// useEffect(()=>{
+useEffect(()=>{
    
-//   async function getClothes(params) {
-//     let response = await fetch('https://dummyjson.com/products/category/womens-dresses');
-//     let get =  await response.json()
-//     console.log(get);
-//     console.log(get.products);
-//     setClothes(get.products)
-//     console.log(clothes);
-//   }
-//   getClothes()
-// })
+  async function getClothes(params) {
+    let response = await fetch(`${API}`);
+    let get =  await response.json()
+    console.log(get);
+    console.log(get.products);
+    setClothes(get.products)
+    console.log(clothes);
+  }
+  getClothes()
+})
 
   return (
-(props.condition) ? <>
-<h1>hyy</h1>
+(condition) ? <>
+{
+  clothes.map((item)=>{
+   return <h1>{item.title}</h1>
+  })
+}
 </> : <>
-<h1>heeloo</h1>
+{
+  clothes.map((item)=>{
+   return <h1>{item.title}</h1>
+  })
+}
 </>
   )
 }

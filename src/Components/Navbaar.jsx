@@ -31,13 +31,13 @@ const Navbaar = () => {
 
 <Routes>
     <Route path='/' element={<Home/>}/>
-    <Route path='/clothes' element={<Clothes condition={true}/>}/>
+    <Route path='/clothes' element={<Clothes condition={true} API={"https://dummyjson.com/products/category/womens-dresses"} />}/>
     <Route path='/favorites' element={<Fav/>}/>
 
-  <Route  path='/dresses' element={<Clothes condition={false}/>} />
-     <Route  path='/shirts' element={<Clothes condition={false}/>} />
-        <Route  path='/bags' element={<Clothes condition={false}/>} />
-        <Route  path='/shoes' element={<Clothes condition={false}/>} />
+  <Route  path='/dresses' element={<Clothes condition={false} API={"https://dummyjson.com/products/category/womens-dresses"}/>} />
+     <Route  path='/shirts' element={<Clothes condition={false} API={" https://dummyjson.com/products/category/mens-shirts"}/>} />
+        <Route  path='/bags' element={<Clothes condition={false}  API={"https://dummyjson.com/products/category/womens-shoes"}/>} />
+        <Route  path='/shoes' element={<Clothes condition={false} API={"https://dummyjson.com/products/category/womens-bags"}/>} />
 </Routes>
    </>
 
