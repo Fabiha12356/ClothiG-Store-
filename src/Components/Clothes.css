@@ -92,8 +92,7 @@
   height: 42px;
   border: none;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.92);
-  color: #a855f7;
+  border: 2px solid  #a855f7;
   font-size: 25px;
   cursor: pointer;
   display: flex;
@@ -102,17 +101,14 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: 0.3s ease;
 }
-
-.fav-btn:hover {
-  background: linear-gradient(135deg, #a855f7, #ec4899);
-  color: white;
-  transform: scale(1.1);
+.light{
+    color: white !important;
+}
+.dark{
+    color:  #a855f7 !important;
 }
 
-.fav-btn.liked {
-  background: linear-gradient(135deg, #a855f7, #ec4899);
-  color: white;
-}
+
 
 /* Category Badge */
 

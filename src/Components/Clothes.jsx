@@ -16,9 +16,14 @@ useEffect(()=>{
   getClothes()
 },[])
 
-const toggleFavorite = (item)=>{
-console.log(item)
+const likebtn = (e)=>{
+  e.target.className =
+  e.target.className === " fa-solid fa-heart dark"
+    ? " fa-solid fa-heart light"
+    : " fa-solid fa-heart dark";
+  
 }
+
 
   return (
 (condition) ? <>
@@ -40,15 +45,6 @@ console.log(item)
       <div className="products-grid">
 {
         clothes.map((item) => {
-
-          const isFavorite = clothes.some((fav) => {
-            fav.id === item.id
-            console.log(fav.id)
-            console.log(item.id)
-          }
-
-          )
-
           return (
 
             <div className="product-card" key={item.id}>
@@ -60,12 +56,8 @@ console.log(item)
                   alt={item.title}
                 />
 
-                <button
-                  className={`fav-btn ${isFavorite ? "liked" : ""}`}
-                  onClick={() => toggleFavorite(item)}
-                  aria-label="Toggle favorite"
-                >
-                  {isFavorite ? "♥" : "♡"}
+                <button className='fav-btn' onClick={likebtn}>
+                 <i className="fa-solid fa-heart light"></i>
                 </button>
 
                 <span className="product-category">
