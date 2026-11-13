@@ -1,6 +1,6 @@
 import React from 'react'
-
-const Fav = () => {
+import "./Fav.css"
+const Fav = ({clothes ,setClothes}) => {
   return (
     <div>Fav</div>
   )

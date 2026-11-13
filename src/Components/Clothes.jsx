@@ -1,12 +1,11 @@
 import React from 'react'
 import { useState,useEffect } from 'react'
 import "./Clothes.css"
-const Clothes = ({condition , API}) => {
+const Clothes = ({condition , API , clothes , setClothes}) => {
 
-let [clothes,setClothes] = useState([])
+// let [clothes,setClothes] = useState([])
 
 useEffect(()=>{
-   
   async function getClothes(params) {
     let response = await fetch(`${API}`);
     let get =  await response.json()
@@ -16,7 +15,8 @@ useEffect(()=>{
   getClothes()
 },[])
 
-const likebtn = (e)=>{
+const likebtn = (e,kapry)=>{
+  setClothes([...clothes, kapry])
   e.target.className =
   e.target.className === " fa-solid fa-heart dark"
     ? " fa-solid fa-heart light"
@@ -101,7 +101,6 @@ const likebtn = (e)=>{
           <p>There are no products in this category yet.</p>
         </div>
       )}
-
     </section>
 
 </> : <>
