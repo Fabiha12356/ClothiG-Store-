@@ -15,13 +15,16 @@ useEffect(()=>{
   getClothes()
 },[])
 
-const likebtn = (clothes)=>{
-  setFavourite([...Favourite,clothes])
+const likebtn = (clothes,event)=>{
   console.log("okk")
-  //   e.target.className =
-  // e.target.className === " fa-solid fa-heart dark"
-  //   ? " fa-solid fa-heart light"
-  //   : " fa-solid fa-heart dark";
+  if(event.target.className === "fa-solid fa-heart light" ){
+    event.target.className = "fa-solid fa-heart dark"
+    setFavourite([...Favourite,clothes])
+  }else{
+    event.target.className = "fa-solid fa-heart light"
+    setFavourite(Favourite.filter((product)=> product.id !== clothes.id ))
+  }
+  console.log(event.target.className);
 }
 
 
@@ -58,8 +61,13 @@ const likebtn = (clothes)=>{
                   alt={item.title}
                 />
 
-                <button className='fav-btn' onClick={()=>likebtn(item)}>
-                 <i className="fa-solid fa-heart light"></i>
+                <button className='fav-btn' onClick={()=>likebtn(item,event)}>
+                 <i className={
+                  `fa solid fa-heart ${
+                    Favourite.some((product)=> product.id === item.id) ? "dark" : "light"
+                  }`
+                 } ></i>
+                 
                 </button>
 
                 <span className="product-category">
@@ -140,7 +148,7 @@ const likebtn = (clothes)=>{
                 />
 
                 
-                <button className='fav-btn' onClick={()=>likebtn(item)}>
+                <button className='fav-btn' onClick={()=>likebtn(item,event)}>
                  <i className="fa-solid fa-heart light"></i>
                 </button>
 
