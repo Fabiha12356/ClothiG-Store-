@@ -1,9 +1,9 @@
 import React from 'react'
 import { useState,useEffect } from 'react'
 import "./Clothes.css"
-const Clothes = ({condition , API , clothes , setClothes}) => {
+const Clothes = ({condition , API, Favourite,setFavourite }) => {
 
-// let [clothes,setClothes] = useState([])
+let [clothes,setClothes] = useState([])
 
 useEffect(()=>{
   async function getClothes(params) {
@@ -15,13 +15,12 @@ useEffect(()=>{
   getClothes()
 },[])
 
-const likebtn = (e,kapry)=>{
-  setClothes([...clothes, kapry])
-  e.target.className =
-  e.target.className === " fa-solid fa-heart dark"
-    ? " fa-solid fa-heart light"
-    : " fa-solid fa-heart dark";
-  
+const likebtn = (clothes)=>{
+  setFavourite([...Favourite,clothes])
+  //   e.target.className =
+  // e.target.className === " fa-solid fa-heart dark"
+  //   ? " fa-solid fa-heart light"
+  //   : " fa-solid fa-heart dark";
 }
 
 
@@ -45,18 +44,20 @@ const likebtn = (e,kapry)=>{
       <div className="products-grid">
 {
         clothes.map((item) => {
+          console.log(item.id)
           return (
 
             <div className="product-card" key={item.id}>
 
               <div className="product-image">
+                
 
                 <img
                   src={item.images[0]}
                   alt={item.title}
                 />
 
-                <button className='fav-btn' onClick={likebtn}>
+                <button className='fav-btn' onClick={()=>likebtn(item)}>
                  <i className="fa-solid fa-heart light"></i>
                 </button>
 

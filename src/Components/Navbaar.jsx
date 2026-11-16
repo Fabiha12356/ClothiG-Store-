@@ -9,7 +9,7 @@ import Home from './Home'
 
 const Navbaar = () => {
 
-    let [clothes,setClothes] = useState([])
+    let [ Favourite,setFavourite] = useState([])
   return (
    <>
     <nav className="navbar">
@@ -35,19 +35,28 @@ const Navbaar = () => {
     <Route path='/' element={<Home/>}/>
     <Route path='/clothes' 
     element={<Clothes condition={true} API={"https://dummyjson.com/products/category/womens-dresses"}
-     clothes={clothes}
-    setClothes={setClothes} />}/>
-    <Route path='/favorites' element={<Fav  clothes={clothes}
-    setClothes={setClothes}/>}/>
+     Favourite={Favourite}
+    setFavourite={setFavourite} />}/>
+    <Route path='/favorites' element={<Fav  
+     Favourite={Favourite}
+    setFavourite={setFavourite} />}/>
 
-  <Route  path='/dresses' element={<Clothes condition={false} API={"https://dummyjson.com/products/category/womens-dresses"}  clothes={clothes}
-    setClothes={setClothes}/>} />
-     <Route  path='/shirts' element={<Clothes condition={false} API={" https://dummyjson.com/products/category/mens-shirts"}  clothes={clothes}
-    setClothes={setClothes}/>} />
-        <Route  path='/bags' element={<Clothes condition={false}  API={"https://dummyjson.com/products/category/womens-bags"}  clothes={clothes}
-    setClothes={setClothes}/>} />
-        <Route  path='/shoes' element={<Clothes condition={false} API={"https://dummyjson.com/products/category/womens-shoes"}  clothes={clothes}
-    setClothes={setClothes}/>} />
+  <Route  path='/dresses' element={<Clothes condition={false}
+   API={"https://dummyjson.com/products/category/womens-dresses"}  
+    Favourite={Favourite}
+    setFavourite={setFavourite} />}/>
+     <Route  path='/shirts' element={<Clothes condition={false} 
+     API={" https://dummyjson.com/products/category/mens-shirts"}  
+     Favourite={Favourite}
+    setFavourite={setFavourite} />}/>
+        <Route  path='/bags' element={<Clothes condition={false}  
+        API={"https://dummyjson.com/products/category/womens-bags"} 
+          Favourite={Favourite}
+    setFavourite={setFavourite} />}/>
+        <Route  path='/shoes' element={<Clothes condition={false} 
+        API={"https://dummyjson.com/products/category/womens-shoes"} 
+         Favourite={Favourite}
+    setFavourite={setFavourite} />}/>
 </Routes>
    </>
 
