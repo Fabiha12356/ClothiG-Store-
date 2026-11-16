@@ -17,12 +17,13 @@ Favourite.length == 0 ? (
 ) : (
   Favourite.map((Favourite)=>{
 
-<div className="fav-item" key={Favourite.id}>
+return(
+  <div className="fav-item" key={Favourite.id}>
 
-              <img
-                src={`https://image.tmdb.org/t/p/w200${Favourite.images[0]}`}
-                alt={Favourite.title}
-              />
+               <img
+                  src={Favourite.images[0]}
+                  alt={Favourite.title}
+                />
 
               <h5>{Favourite.title}</h5>
               <button className="remove-fav-btn">
@@ -30,6 +31,7 @@ Favourite.length == 0 ? (
                       </button>
 
             </div>
+)
 
   })
 )

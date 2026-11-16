@@ -17,6 +17,7 @@ useEffect(()=>{
 
 const likebtn = (clothes)=>{
   setFavourite([...Favourite,clothes])
+  console.log("okk")
   //   e.target.className =
   // e.target.className === " fa-solid fa-heart dark"
   //   ? " fa-solid fa-heart light"
@@ -138,12 +139,9 @@ const likebtn = (clothes)=>{
                   alt={item.title}
                 />
 
-                <button
-                  className={`fav-btn ${isFavorite ? "liked" : ""}`}
-                  onClick={() => toggleFavorite(item)}
-                  aria-label="Toggle favorite"
-                >
-                  {isFavorite ? "♥" : "♡"}
+                
+                <button className='fav-btn' onClick={()=>likebtn(item)}>
+                 <i className="fa-solid fa-heart light"></i>
                 </button>
 
                 <span className="product-category">

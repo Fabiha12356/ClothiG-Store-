@@ -1,5 +1,5 @@
 .fav-container {
-  background: #100c18;
+  background: #f8f7fc;
   min-height: 100vh;
   padding: 40px 7%;
   color: white;
@@ -8,6 +8,9 @@
 .fav-heading {
   text-align: center;
   margin-bottom: 35px;
+  background: linear-gradient(90deg, #a855f7, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .fav-heading h2 {
@@ -18,6 +21,9 @@
 .fav-heading p {
   color: #aaa;
   margin-top: 8px;
+  background: linear-gradient(90deg, #a855f7, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Favorite Movie List */
@@ -27,25 +33,27 @@
   margin: auto;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 50px !important;
   background-color: white !important;
 }
 
 .fav-item {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 25px !important;
   padding: 12px;
-  background: #1b1525;
-  border: 1px solid #30243e;
+  background: white;
+  border: 1px solid  #a855f7;
   border-radius: 12px;
   transition: 0.3s ease;
 }
 
 .fav-item:hover {
-  transform: translateY(-3px);
-  background: #251b33;
-  box-shadow: 0 5px 18px rgba(168, 68, 255, 0.15);
+  transform: translateY(-1px);
+background: linear-gradient(90deg, #a855f7, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  box-shadow: 0 5px 18px #a855f7;
 }
 
 .fav-item img {
@@ -59,19 +67,19 @@
   font-size: 17px;
   font-weight: 600;
   margin: 0;
-  color: white;
+  color: #a855f7;
 }
 
 .no-fav {
   text-align: center;
-  color: #aaa;
+  color: #a855f7;
   padding: 50px 0;
 }
 
 .remove-fav-btn {
   margin-left: auto;
-  background: #2b1c38;
-  color: #ff6b81;
+  background: white ;
+  color: #a855f7;
   border: none;
   border-radius: 8px;
   padding: 8px 13px;
@@ -79,10 +87,16 @@
   font-size: 18px;
   transition: 0.3s;
 }
+h1{
+    background: linear-gradient(90deg, #a855f7, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center !important;
+}
 
 .remove-fav-btn:hover {
-  background: #ff4757;
-  color: white;
+  border:  2px solid #a855f7;
+  color: #a855f7;
 }
 
 /* Responsive */
