@@ -73,9 +73,6 @@ body {
 }
 
 .nav-links a:hover,
-.nav-links a.active {
-    color: #a855f7;
-}
 
 .nav-links a:hover::after,
 .nav-links a.active::after {

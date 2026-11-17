@@ -20,7 +20,7 @@ const Navbaar = () => {
         </Link>
 
         <ul className="nav-links">
-            <li> <Link to ="/" className="active">Home</Link></li>
+            <li> <Link to ="/">Home</Link></li>
             <li><Link to ="/clothes">Clothes</Link></li>
             <li><Link to ="/favorites">Favorites</Link></li>
         </ul>
