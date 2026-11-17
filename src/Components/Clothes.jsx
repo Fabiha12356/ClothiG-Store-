@@ -25,7 +25,6 @@ const likebtn = (clothes) => {
     )
 
   }else {
-
     setFavourite([...Favourite, clothes])
 
   }
@@ -153,8 +152,14 @@ const likebtn = (clothes) => {
                 />
 
                 
-                <button className='fav-btn' onClick={()=>likebtn(item,event)}>
-                 <i className="fa-solid fa-heart light"></i>
+                <button className='fav-btn' onClick={()=>likebtn(item)}>
+                 <i className={
+                  `fa-solid fa-heart ${
+                    Favourite.some((product) => product.id === item.id)
+                    ? "dark"
+                    : "light"
+                  }`
+                 }></i>
                 </button>
 
                 <span className="product-category">

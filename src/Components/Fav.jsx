@@ -1,6 +1,11 @@
 import React from 'react'
 import "./Fav.css"
 const Fav = ({Favourite ,setFavourite}) => {
+
+  let removeBTn = (favs)=>{
+    console.log("okkk")
+    setFavourite(Favourite.filter((product)=> product.id !== favs.id))
+  }
   return (
    
     <div className="fav-container">
@@ -26,7 +31,7 @@ return(
                 />
 
               <h5>{Favourite.title}</h5>
-              <button className="remove-fav-btn">
+              <button className="remove-fav-btn" onClick={()=> removeBTn(Favourite)}>
                       ✕
                       </button>
 
